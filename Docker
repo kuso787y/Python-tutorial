@@ -10,3 +10,7 @@ https://blog.hellosanta.com.tw/%E7%B6%B2%E7%AB%99%E8%A8%AD%E8%A8%88/%E4%BC%BA%E6
 
 git push可以選擇不需上傳的檔案，避免版控出問題
 https://github.com/github/gitignore
+
+docker + kafka
+https://cutejaneii.wordpress.com/2017/06/19/docker-7-%E7%94%A8docker%E5%BB%BA%E7%AB%8Bkafka%E6%9C%8D%E5%8B%99%E4%B8%8A/
+https://segmentfault.com/a/1190000015627478
