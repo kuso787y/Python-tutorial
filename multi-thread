@@ -1,1 +1,4 @@
 https://blog.gtwang.org/programming/python-threading-multithreaded-programming-tutorial/
+
+python多執行序效能差的原因
+http://cenalulu.github.io/python/gil-in-python/
