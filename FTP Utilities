@@ -1,0 +1,89 @@
+import logging
+import ftplib
+import sys
+
+class Main:
+    
+    def __init__(self):
+        self.ftp = ftplib.FTP()
+        self.timeout = 60
+        
+    def login(self, host, port, user, passwd):
+        '''FTP login.
+
+        Args:
+            host: FTP server IP
+            port: FTP server port
+            user: FTP login account
+            passwd: FTP login pasword
+        '''
+        logger.info('connect to FTP Server')
+        try:
+            self.ftp.connect(host=host, port=port, timeout=self.timeout)
+            self.ftp.login(user=user, passwd=passwd)
+        except ftplib.all_errors as e:
+            logger.error(e)
+            sys.exit(21)
+    
+    def logout(self):
+        logger.info('logout!')
+        try:
+            self.ftp.quit()
+            self.ftp.close()
+        except ftplib.all_errors as e:
+            logger.error(e)
+            sys.exit(21)
+        
+    def transfer(self, t_type, source=None, target=None):
+        '''FTP transfer file.
+
+        Args:
+            t_type: FTP behavier(STOR, RETR, SIZE etc.)
+            source: source file path & file name(e.g. D:\test.txt or /ftppath/test.txt)
+            target: target file path & file name
+        '''
+        if t_type == 'STOR':
+            logger.info('transfer starting for {} to {}'.format(source, target))
+            with open(source, 'rb') as f:
+                try:
+                    self.ftp.storbinary('STOR {}'.format(target), f)
+                except ftplib.all_errors as e:
+                    logger.error(e)
+                    sys.exit(21)
+        elif t_type == 'RETR':
+            logger.info('transfer starting for {} to {}'.format(source, target))
+            with open(target, 'wb') as f:
+                try:
+                    self.ftp.retrbinary('RETR {}'.format(source), f.write)
+                except ftplib.all_errors as e:
+                    logger.error(e)
+                    sys.exit(21)
+        else:
+            logger.warning('no file transfer behavier or use wrong transfer type!')
+
+if __name__ == '__main__':
+    
+    #log settings
+    logger = logging.getLogger()
+    logger.setLevel(logging.INFO)
+    formatter = logging.Formatter('%(asctime)s - [%(levelname)s] - pid:%(process)d - %(message)s')
+    hdlr = logging.StreamHandler()
+    hdlr.setFormatter(formatter)
+    logger.addHandler(hdlr)
+    
+    #variable settings
+    try:
+        host = sys.argv[1]
+        account = sys.argv[2]
+        passwd = sys.argv[3]
+        t_type = sys.argv[4]
+        source = sys.argv[5]
+        target = sys.argv[6]
+    except IndexError:
+        logger.error('parameter count mismatch')
+        sys.exit(1)
+    
+    ftp = Main()
+    ftp.login(host, 21, account, passwd)
+    ftp.transfer(t_type, source, target)
+    ftp.logout()
