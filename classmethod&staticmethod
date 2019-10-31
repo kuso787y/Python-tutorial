@@ -1,0 +1,29 @@
+class Date(object):
+
+    def __init__(self, day=0, month=0, year=0):
+        self.day = day
+        self.month = month
+        self.year = year
+
+    @classmethod
+    def from_string(cls, date_as_string):
+        day, month, year = map(int, date_as_string.split('-'))
+        date1 = cls(day, month, year)
+        return date1
+
+    @staticmethod
+    def is_date_valid(date_as_string):
+        day, month, year = map(int, date_as_string.split('-'))
+        return day <= 31 and month <= 12 and year <= 3999
+
+# 今天若有個日期格式為 dd-mm-yyyy, 若需分別取出年月日丟到 Date class 使用, 則必須額外處理
+string_date = '11-09-2019'
+day, month, year = map(int, string_date.split('-'))
+date1 = Date(day, month, year)
+
+# 承上, 若function使用 @classmethod 方式, 就不需要使用 Date class的實例, 而是使用自己定義的類別
+date2 = Date.from_string('11-09-2019')
+
+# 當function不需要使用class實例時, 可用 @staticmethod 方式, 帶入自己的參數
+# 以下例子是若要確認是否為日期格式, fuction不需要使用 self就可做到
+is_date = Date.is_date_valid('11-09-2019')
