@@ -16,7 +16,7 @@ class Date(object):
         day, month, year = map(int, date_as_string.split('-'))
         return day <= 31 and month <= 12 and year <= 3999
 
-# 今天若有個日期格式為 dd-mm-yyyy, 若需分別取出年月日丟到 Date class 使用, 則必須額外處理
+# 有個日期格式為 dd-mm-yyyy, 需分別取出年月日丟到 Date class 使用, 則必須額外處理
 string_date = '11-09-2019'
 day, month, year = map(int, string_date.split('-'))
 date1 = Date(day, month, year)
