@@ -11,3 +11,17 @@ TWM400HelpDesk@taiwanmobile.com
 https://meetingsapac4.webex.com/join/ginychen
 
 https://techforum.microsoft.com/virtualsummit/zh-tw 
+
+
+Stream Push URL
+https://api.powerbi.com/beta/fbd201e1-7f25-4ea3-83ac-667605c5d354/datasets/042a51a7-09c2-4b68-872f-33447109fdf0/rows?key=ZqiBqEuTTD1I2tyJUSFcAyXiwvXoqUrhzWzvxKD30ALERemdvUAGzI5CBSU2vPvpDn6wQE55%2F1CvHSQ0QPDSjQ%3D%3D
+
+Streaming content
+
+[
+{
+"stock_id" :"AAAAA555555",
+"date" :"AAAAA555555",
+"trading_volume" :98.6
+}
+]
