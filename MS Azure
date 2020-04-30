@@ -1,3 +1,7 @@
+MS Data gateway
+https://docs.microsoft.com/zh-tw/power-bi/power-bi-whitelist-urls
+https://docs.microsoft.com/zh-tw/data-integration/gateway/service-gateway-communication
+
 PBI REST API doc
 https://docs.microsoft.com/zh-tw/rest/api/power-bi/
 python lib: adal
