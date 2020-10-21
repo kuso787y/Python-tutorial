@@ -1,0 +1,31 @@
+帳號已建立完成並啟用MFA，Power BI Pro授權再請你們自行調整至所需帳號，其他討論議題一併列於分隔線之下，謝謝。
+
+全域管理員(管理所有資源)
+FullAdmin@taiwanmobile5.onmicrosoft.com
+Toda1886
+
+Power Bi管理員(僅管理Power bi)
+Powerbiadmin@taiwanmobile5.onmicrosoft.com
+Joxa9341
+
+使用者(報表製作者)
+user@taiwanmobile5.onmicrosoft.com
+Moku4478
+
+Viewer請使用Power Bi管理員身分邀請任一帳號，該帳號將會收到觀看該報表邀請信函，其權限就僅為Viewer
+
+可參考:https://docs.microsoft.com/zh-tw/power-bi/collaborate-share/service-share-dashboards
+
+----------------------我是分隔線----------------------
+MFA啟用說明:
+https://docs.microsoft.com/zh-tw/azure/active-directory/authentication/howto-mfa-userstates
+
+SSRS to Power BI:
+https://docs.microsoft.com/zh-tw/power-bi/guidance/migrate-ssrs-reports-to-power-bi
+(可試著依官方文件操作，但我們並沒有相關經驗)
+
+
+
+
+
+
