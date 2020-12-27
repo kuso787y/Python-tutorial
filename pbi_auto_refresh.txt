@@ -1,1 +1,16 @@
-1
+[Step 1] Register an Azure AD app，get "client id"
+https://docs.microsoft.com/en-us/power-bi/developer/embedded/register-app?tabs=customers%2CAzure
+https://app.powerbi.com/embedsetup
+
+[Step 2] Admin agreed Azure AD API premissions (待確認此步驟是否需要)
+
+[Step 3] via MSAL(Microsoft Authentication Library) get "Token"
+
+[Step 4] use Token & Azure AD account + password call Power BI API
+
+https://docs.microsoft.com/en-us/rest/api/power-bi/datasets/refreshdataset
+
+ref:
+https://www.datalineo.com/post/power-bi-rest-api-with-python-and-microsoft-authentication-library-msal
+https://zhuanlan.zhihu.com/p/127272606
+https://msal-python.readthedocs.io/en/latest/#msal.PublicClientApplication.initiate_device_flow
