@@ -2,9 +2,10 @@
 https://docs.microsoft.com/en-us/power-bi/developer/embedded/register-app?tabs=customers%2CAzure
 https://app.powerbi.com/embedsetup
 
-[Step 2] Admin agreed Azure AD API premissions (待確認此步驟是否需要)
+[Step 2] Admin agreed Azure AD API premissions
+https://docs.microsoft.com/en-us/azure/active-directory/develop/v2-permissions-and-consent
 
-[Step 3] via MSAL(Microsoft Authentication Library) get "Token"
+[Step 3] via MSAL(Microsoft Authentication Library) get "Access Token"
 
 [Step 4] use Token & Azure AD account + password call Power BI API
 
