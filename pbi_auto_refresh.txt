@@ -15,3 +15,4 @@ ref:
 https://www.datalineo.com/post/power-bi-rest-api-with-python-and-microsoft-authentication-library-msal
 https://zhuanlan.zhihu.com/p/127272606
 https://msal-python.readthedocs.io/en/latest/#msal.PublicClientApplication.initiate_device_flow
+https://blog.darrenjrobinson.com/microsoft-graph-using-msal-with-python/
